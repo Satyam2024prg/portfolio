@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Satyam - Software Engineer & Full Stack Developer. Building scalable web applications, APIs, automation systems, and data-driven solutions.">
+  <meta name="keywords"
+    content="Satyam, Software Engineer, Full Stack Developer, Web Developer, Portfolio, Node.js, Python, FastAPI">
+  <meta name="author" content="Satyam">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Satyam | Software Engineer Portfolio">
+  <meta property="og:description"
+    content="Building scalable web applications, APIs, automation systems, and data-driven solutions.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#6366f1">
+
+  <title>Satyam | Software Engineer & Full Stack Developer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="antialiased">
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header>
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 glass transition-all duration-300" role="navigation"
+      aria-label="Main navigation">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-[72px]">
+          <!-- Logo -->
+          <a href="#home" class="flex items-center gap-2 group" aria-label="Go to home">
+            <span
+              class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-400 flex items-center justify-center text-white font-bold text-lg group-hover:scale-105 transition-transform">S</span>
+            <span class="font-bold text-lg hidden sm:block">Satyam<span class="gradient-text">.</span></span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <div class="nav-links-desktop hidden lg:flex items-center gap-1">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#achievements" class="nav-link">Achievements</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex items-center gap-3">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+              <i id="theme-icon" class="fas fa-sun text-lg"></i>
+            </button>
+            <button id="mobile-menu-btn"
+              class="mobile-menu-btn lg:hidden w-10 h-10 rounded-xl flex items-center justify-center border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-indigo-500 transition-colors"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+              <i class="fas fa-bars text-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/60 z-40 lg:hidden" aria-hidden="true"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-72 glass z-50 lg:hidden pt-20 px-6"
+      role="dialog" aria-label="Mobile navigation">
+      <div class="flex flex-col gap-2">
+        <a href="#home" class="mobile-nav-link nav-link active py-3">Home</a>
+        <a href="#about" class="mobile-nav-link nav-link py-3">About</a>
+        <a href="#skills" class="mobile-nav-link nav-link py-3">Skills</a>
+        <a href="#projects" class="mobile-nav-link nav-link py-3">Projects</a>
+        <a href="#experience" class="mobile-nav-link nav-link py-3">Experience</a>
+        <a href="#education" class="mobile-nav-link nav-link py-3">Education</a>
+        <a href="#certifications" class="mobile-nav-link nav-link py-3">Certifications</a>
+        <a href="#achievements" class="mobile-nav-link nav-link py-3">Achievements</a>
+        <a href="#contact" class="mobile-nav-link nav-link py-3">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center section-padding pt-32 overflow-hidden">
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Hero Content -->
+          <div data-aos="fade-right">
+            <p class="text-indigo-400 font-medium mb-4 flex items-center gap-2">
+              <span class="w-8 h-px bg-indigo-400"></span>
+              Hello, I'm
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+              <span class="gradient-text">Satyam</span>
+            </h1>
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-[var(--color-text-secondary)] mb-2">
+              Software Engineer
+            </h2>
+            <p class="text-lg sm:text-xl text-[var(--color-text-secondary)] mb-6 h-8">
+              <span id="typed-text"></span>
+            </p>
+            <p class="text-[var(--color-text-secondary)] text-base sm:text-lg max-w-xl mb-8 leading-relaxed">
+              Building scalable web applications, APIs, automation systems, and data-driven solutions through clean and
+              efficient code.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#projects" class="btn-primary">
+                <i class="fas fa-folder-open"></i>
+                View Projects
+              </a>
+              <a href="assets/resume/resume.pdf" download class="btn-secondary">
+                <i class="fas fa-download"></i>
+                Download Resume
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <i class="fas fa-envelope"></i>
+                Contact Me
+              </a>
+            </div>
+          </div>
+
+          <!-- Profile Photo -->
+          <div class="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
+            <div class="profile-photo-wrapper">
+              <img src="assets/images/profile-photo.jpg" alt="Satyam - Software Engineer Profile Photo"
+                class="profile-photo" width="280" height="280" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-[var(--color-bg-secondary)]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Passionate About <span class="gradient-text">Building Software</span></h2>
+          <p class="section-subtitle mx-auto">
+            Passionate Software Engineer with experience in full-stack development, backend systems, databases, DevOps
+            tools, and automation solutions.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto mb-16">
+          <div data-aos="fade-up">
+            <p class="text-[var(--color-text-secondary)] mb-6 leading-relaxed">
+              I enjoy building reliable software that solves real-world problems and continuously learning modern
+              technologies. My journey spans full-stack development, backend engineering, API design, and automation —
+              always with a focus on clean, maintainable code.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-lg bg-indigo-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-check text-indigo-400 text-xs"></i>
+                </span>
+                <span class="text-[var(--color-text-secondary)]">Full-stack development with modern web
+                  technologies</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-lg bg-indigo-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-check text-indigo-400 text-xs"></i>
+                </span>
+                <span class="text-[var(--color-text-secondary)]">Backend systems, API development & database
+                  design</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-lg bg-indigo-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-check text-indigo-400 text-xs"></i>
+                </span>
+                <span class="text-[var(--color-text-secondary)]">Problem-solving mindset with continuous learning</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-6 h-6 rounded-lg bg-indigo-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-check text-indigo-400 text-xs"></i>
+                </span>
+                <span class="text-[var(--color-text-secondary)]">DevOps, automation & data-driven solutions</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tech Stack Showcase -->
+        <div data-aos="fade-up">
+          <h3 class="text-2xl font-bold text-center mb-12">Tech <span class="gradient-text">Stack</span></h3>
+
+          <!-- Frontend -->
+          <div class="mb-10">
+            <div class="category-label"><i class="fas fa-desktop"></i> Frontend</div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="50"><i class="fab fa-html5"
+                  style="color:#E34F26"></i><span>HTML5</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="100"><i class="fab fa-css3-alt"
+                  style="color:#1572B6"></i><span>CSS3</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="150"><i class="fab fa-js"
+                  style="color:#F7DF1E"></i><span>JavaScript</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-wind"
+                  style="color:#06B6D4"></i><span>Tailwind CSS</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="250"><i class="fab fa-bootstrap"
+                  style="color:#7952B3"></i><span>Bootstrap</span></div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="mb-10">
+            <div class="category-label"><i class="fas fa-server"></i> Backend</div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+              <div class="tech-card" data-aos="fade-up"><i class="fab fa-node-js"
+                  style="color:#339933"></i><span>Node.js</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="50"><i class="fas fa-bolt"
+                  style="color:#000"></i><span>Express.js</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="100"><i class="fab fa-python"
+                  style="color:#3776AB"></i><span>Python</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="150"><i class="fas fa-flask"
+                  style="color:#000"></i><span>Flask</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-rocket"
+                  style="color:#009688"></i><span>FastAPI</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="250"><i class="fab fa-java"
+                  style="color:#ED8B00"></i><span>Java</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-leaf"
+                  style="color:#6DB33F"></i><span>Spring Boot</span></div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="mb-10">
+            <div class="category-label"><i class="fas fa-database"></i> Databases</div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+              <div class="tech-card" data-aos="fade-up"><i class="fas fa-database"
+                  style="color:#4479A1"></i><span>MySQL</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="50"><i class="fas fa-elephant"
+                  style="color:#336791"></i><span>PostgreSQL</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-leaf"
+                  style="color:#47A248"></i><span>MongoDB</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="150"><i class="fas fa-memory"
+                  style="color:#DC382D"></i><span>Redis</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-search"
+                  style="color:#005571"></i><span>Elasticsearch</span></div>
+            </div>
+          </div>
+
+          <!-- DevOps -->
+          <div class="mb-10">
+            <div class="category-label"><i class="fas fa-cogs"></i> DevOps</div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+              <div class="tech-card" data-aos="fade-up"><i class="fab fa-docker"
+                  style="color:#2496ED"></i><span>Docker</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="50"><i class="fas fa-hammer"
+                  style="color:#D24939"></i><span>Jenkins</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="100"><i class="fab fa-git-alt"
+                  style="color:#F05032"></i><span>Git</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="150"><i class="fab fa-github"
+                  style="color:#181717"></i><span>GitHub</span></div>
+              <div class="tech-card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-sync-alt"
+                  style="color:#6366f1"></i><span>CI/CD</span></div>
+            </div>
+          </div>
+
+          <!-- Data & API -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <div class="category-label"><i class="fas fa-chart-bar"></i> Data Processing</div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="tech-card" data-aos="fade-up"><i class="fas fa-table"
+                    style="color:#150458"></i><span>Pandas</span></div>
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="50"><i class="fas fa-bolt"
+                    style="color:#0078D4"></i><span>Polars</span></div>
+              </div>
+            </div>
+            <div>
+              <div class="category-label"><i class="fas fa-plug"></i> API Development</div>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="tech-card" data-aos="fade-up"><i class="fas fa-exchange-alt"
+                    style="color:#6366f1"></i><span>REST APIs</span></div>
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="50"><i class="fas fa-shield-alt"
+                    style="color:#10B981"></i><span>Authentication</span></div>
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-link"
+                    style="color:#8B5CF6"></i><span>API Integration</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="section-tag">Skills</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Expertise</span></h2>
+          <p class="section-subtitle mx-auto">A comprehensive toolkit built through hands-on projects and continuous
+            learning.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Frontend -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="50">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center">
+                <i class="fas fa-code text-indigo-400"></i>
+              </div>
+              <h3 class="font-bold text-lg">Frontend Development</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+              <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+              <span class="skill-tag"><i class="fab fa-react"></i> React</span>
+              <span class="skill-tag"><i class="fas fa-wind"></i> Tailwind CSS</span>
+              <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                <i class="fas fa-server text-purple-400"></i>
+              </div>
+              <h3 class="font-bold text-lg">Backend Development</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+              <span class="skill-tag"><i class="fas fa-bolt"></i> Express.js</span>
+              <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+              <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
+              <span class="skill-tag"><i class="fas fa-rocket"></i> FastAPI</span>
+              <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+              <span class="skill-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="150">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center">
+                <i class="fas fa-database text-cyan-400"></i>
+              </div>
+              <h3 class="font-bold text-lg">Databases</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+              <span class="skill-tag"><i class="fas fa-elephant"></i> PostgreSQL</span>
+              <span class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+              <span class="skill-tag"><i class="fas fa-memory"></i> Redis</span>
+              <span class="skill-tag"><i class="fas fa-search"></i> Elasticsearch</span>
+            </div>
+          </div>
+
+          <!-- DevOps -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center">
+                <i class="fas fa-cogs text-green-400"></i>
+              </div>
+              <h3 class="font-bold text-lg">DevOps & Deployment</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
+              <span class="skill-tag"><i class="fas fa-hammer"></i> Jenkins</span>
+              <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+              <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+            </div>
+          </div>
+
+          <!-- Data Engineering -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="250">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-orange-500/20 flex items-center justify-center">
+                <i class="fas fa-chart-line text-orange-400"></i>
+              </div>
+              <h3 class="font-bold text-lg">Data Engineering</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag"><i class="fas fa-table"></i> Pandas</span>
+              <span class="skill-tag"><i class="fas fa-bolt"></i> Polars</span>
+            </div>
+          </div>
+
+          <!-- API Development -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-pink-500/20 flex items-center justify-center">
+                <i class="fas fa-plug text-pink-400"></i>
+              </div>
+              <h3 class="font-bold text-lg">API Development</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag"><i class="fas fa-exchange-alt"></i> REST APIs</span>
+              <span class="skill-tag"><i class="fas fa-shield-alt"></i> Authentication</span>
+              <span class="skill-tag"><i class="fas fa-key"></i> Authorization</span>
+            </div>
+          </div>
+
+          <!-- CS Fundamentals -->
+          <div class="skill-category md:col-span-2 lg:col-span-3" data-aos="fade-up" data-aos-delay="350">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-yellow-500/20 flex items-center justify-center">
+                <i class="fas fa-graduation-cap text-yellow-400"></i>
+              </div>
+              <h3 class="font-bold text-lg">Computer Science Fundamentals</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag"><i class="fas fa-project-diagram"></i> Data Structures</span>
+              <span class="skill-tag"><i class="fas fa-sitemap"></i> Algorithms</span>
+              <span class="skill-tag"><i class="fas fa-cube"></i> OOP</span>
+              <span class="skill-tag"><i class="fas fa-database"></i> Database Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-[var(--color-bg-secondary)]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle mx-auto">Real-world projects showcasing my skills in development, automation, and
+            system design.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="project-image">
+              <img src="assets/images/project1.jpg" alt="Fingerprint Attendance Management System" loading="lazy">
+              <div class="project-overlay">
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">Fingerprint Attendance Management System</h3>
+              <p class="text-[var(--color-text-secondary)] text-sm mb-4">IoT-based attendance system using biometric
+                fingerprint scanning with real-time data sync and reporting.</p>
+              <ul class="text-xs text-[var(--color-text-muted)] mb-4 space-y-1">
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Biometric authentication</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Real-time attendance tracking</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Admin dashboard & reports</li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2 py-1 rounded-md bg-indigo-500/10 text-indigo-400">NodeMCU ESP8266</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-indigo-500/10 text-indigo-400">R307 Sensor</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-indigo-500/10 text-indigo-400">PHP</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-indigo-500/10 text-indigo-400">MySQL</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="#" class="btn-secondary text-sm py-2 px-4 flex-1 justify-center"><i class="fab fa-github"></i>
+                  GitHub</a>
+                <a href="#" class="btn-primary text-sm py-2 px-4 flex-1 justify-center"><i
+                    class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
+              <img src="assets/images/project2.jpg" alt="Tender Document Automation System" loading="lazy">
+              <div class="project-overlay">
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">Tender Document Automation System</h3>
+              <p class="text-[var(--color-text-secondary)] text-sm mb-4">AI-powered document processing system for
+                automating tender document analysis and data extraction.</p>
+              <ul class="text-xs text-[var(--color-text-muted)] mb-4 space-y-1">
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> AI document parsing</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Automated data extraction</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Batch processing support</li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2 py-1 rounded-md bg-purple-500/10 text-purple-400">Python</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-purple-500/10 text-purple-400">AI APIs</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-purple-500/10 text-purple-400">Doc Processing</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="#" class="btn-secondary text-sm py-2 px-4 flex-1 justify-center"><i class="fab fa-github"></i>
+                  GitHub</a>
+                <a href="#" class="btn-primary text-sm py-2 px-4 flex-1 justify-center"><i
+                    class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="project-image">
+              <img src="assets/images/project3.jpg" alt="Portfolio Website" loading="lazy">
+              <div class="project-overlay">
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">Portfolio Website</h3>
+              <p class="text-[var(--color-text-secondary)] text-sm mb-4">Premium responsive portfolio website with dark
+                mode, animations, and modern developer aesthetics.</p>
+              <ul class="text-xs text-[var(--color-text-muted)] mb-4 space-y-1">
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Dark/Light mode toggle</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Scroll animations</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Fully responsive design</li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2 py-1 rounded-md bg-cyan-500/10 text-cyan-400">HTML</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-cyan-500/10 text-cyan-400">Tailwind CSS</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-cyan-500/10 text-cyan-400">JavaScript</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="#" class="btn-secondary text-sm py-2 px-4 flex-1 justify-center"><i class="fab fa-github"></i>
+                  GitHub</a>
+                <a href="#" class="btn-primary text-sm py-2 px-4 flex-1 justify-center"><i
+                    class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-image">
+              <img src="assets/images/project4.jpg" alt="REST API Platform" loading="lazy">
+              <div class="project-overlay">
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">REST API Platform</h3>
+              <p class="text-[var(--color-text-secondary)] text-sm mb-4">Scalable REST API platform with authentication,
+                authorization, and PostgreSQL integration.</p>
+              <ul class="text-xs text-[var(--color-text-muted)] mb-4 space-y-1">
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> JWT authentication</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Role-based access control</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Auto-generated API docs</li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2 py-1 rounded-md bg-green-500/10 text-green-400">FastAPI</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-green-500/10 text-green-400">PostgreSQL</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="#" class="btn-secondary text-sm py-2 px-4 flex-1 justify-center"><i class="fab fa-github"></i>
+                  GitHub</a>
+                <a href="#" class="btn-primary text-sm py-2 px-4 flex-1 justify-center"><i
+                    class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="250">
+            <div class="project-image">
+              <img src="assets/images/project5.jpg" alt="Search Application" loading="lazy">
+              <div class="project-overlay">
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">Search Application</h3>
+              <p class="text-[var(--color-text-secondary)] text-sm mb-4">Full-text search application powered by
+                Elasticsearch with faceted filtering and real-time results.</p>
+              <ul class="text-xs text-[var(--color-text-muted)] mb-4 space-y-1">
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Full-text search</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Faceted filtering</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Real-time indexing</li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2 py-1 rounded-md bg-yellow-500/10 text-yellow-400">Node.js</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-yellow-500/10 text-yellow-400">Elasticsearch</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="#" class="btn-secondary text-sm py-2 px-4 flex-1 justify-center"><i class="fab fa-github"></i>
+                  GitHub</a>
+                <a href="#" class="btn-primary text-sm py-2 px-4 flex-1 justify-center"><i
+                    class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-image">
+              <img src="assets/images/project6.jpg" alt="Dockerized Application" loading="lazy">
+              <div class="project-overlay">
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">Dockerized Application</h3>
+              <p class="text-[var(--color-text-secondary)] text-sm mb-4">Containerized full-stack application with
+                Docker Compose, PostgreSQL, and Node.js backend services.</p>
+              <ul class="text-xs text-[var(--color-text-muted)] mb-4 space-y-1">
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Multi-container setup</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Environment configuration</li>
+                <li><i class="fas fa-check text-indigo-400 mr-1"></i> Production-ready deployment</li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs px-2 py-1 rounded-md bg-blue-500/10 text-blue-400">Docker</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-blue-500/10 text-blue-400">PostgreSQL</span>
+                <span class="text-xs px-2 py-1 rounded-md bg-blue-500/10 text-blue-400">Node.js</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="#" class="btn-secondary text-sm py-2 px-4 flex-1 justify-center"><i class="fab fa-github"></i>
+                  GitHub</a>
+                <a href="#" class="btn-primary text-sm py-2 px-4 flex-1 justify-center"><i
+                    class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="section-tag">Experience</span>
+          <h2 class="section-title">Work <span class="gradient-text">Journey</span></h2>
+          <p class="section-subtitle mx-auto">Professional experience, training, and internships in software development.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wider">Experience</span>
+              <h3 class="font-bold text-lg mt-1 mb-1">Software Engineer</h3>
+              <p class="text-indigo-400 font-medium text-sm mb-1">Tecdune Services LLP, Noida</p>
+              <p class="text-sm text-[var(--color-text-muted)] mb-3">November 2025 – May 2026</p>
+              <p class="text-[var(--color-text-secondary)] text-sm mb-3">Worked with Node.js, Express.js, MongoDB, Elasticsearch, Jenkins, Docker, Python, Polars, and Pandas.</p>
+              <ul class="text-[var(--color-text-secondary)] text-sm space-y-1 list-disc list-inside">
+                <li>Backend development</li>
+                <li>REST API development</li>
+                <li>Database integration</li>
+                <li>Search optimization using Elasticsearch</li>
+                <li>Data processing and analysis using Pandas and Polars</li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="skill-tag text-xs">Node.js</span>
+                <span class="skill-tag text-xs">Express.js</span>
+                <span class="skill-tag text-xs">MongoDB</span>
+                <span class="skill-tag text-xs">Elasticsearch</span>
+                <span class="skill-tag text-xs">Docker</span>
+                <span class="skill-tag text-xs">Python</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider">Training</span>
+              <h3 class="font-bold text-lg mt-1 mb-1">Java Full Stack Development Training</h3>
+              <p class="text-indigo-400 font-medium text-sm mb-1">Ducat, Noida</p>
+              <p class="text-sm text-[var(--color-text-muted)] mb-2">August 2025 – Present</p>
+              <p class="text-[var(--color-text-secondary)] text-sm">Comprehensive full stack training covering Java backend development, web technologies, and industry-standard development practices.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Internship</span>
+              <h3 class="font-bold text-lg mt-1 mb-1">C++ Developer Internship</h3>
+              <p class="text-sm text-[var(--color-text-muted)] mb-3">July 2024 – Aug 2024</p>
+              <ul class="text-[var(--color-text-secondary)] text-sm space-y-1 list-disc list-inside">
+                <li>Built small-scale console projects using OOP and STL.</li>
+                <li>Improved debugging and code optimization skills through project reviews.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="text-xs font-semibold text-green-400 uppercase tracking-wider">Internship</span>
+              <h3 class="font-bold text-lg mt-1 mb-1">Web Development Internship</h3>
+              <p class="text-sm text-[var(--color-text-muted)] mb-3">Dec 2023 – Jan 2024</p>
+              <ul class="text-[var(--color-text-secondary)] text-sm space-y-1 list-disc list-inside">
+                <li>Developed interactive web pages using HTML, CSS, and JavaScript.</li>
+                <li>Collaborated in team-based UI enhancement projects.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding bg-[var(--color-bg-secondary)]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="section-tag">Education</span>
+          <h2 class="section-title">Academic <span class="gradient-text">Background</span></h2>
+          <p class="section-subtitle mx-auto">Foundation in computer science and software engineering principles.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="font-bold text-lg mb-1">Bachelor of Technology – Computer Science</h3>
+              <p class="text-indigo-400 font-medium text-sm mb-1">Kanpur Institute of Technology</p>
+              <p class="text-sm text-[var(--color-text-muted)] mb-3">2021 – 2025 · 83.08%</p>
+              <p class="text-[var(--color-text-secondary)] text-sm mb-3">Focused on software engineering, data
+                structures, algorithms, and system design with hands-on project experience.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-tag text-xs">Data Structures</span>
+                <span class="skill-tag text-xs">Algorithms</span>
+                <span class="skill-tag text-xs">Database Systems</span>
+                <span class="skill-tag text-xs">Operating Systems</span>
+                <span class="skill-tag text-xs">Computer Networks</span>
+                <span class="skill-tag text-xs">Software Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="font-bold text-lg mb-1">Intermediate (Class XII)</h3>
+              <p class="text-indigo-400 font-medium text-sm mb-1">LDC Public School</p>
+              <p class="text-sm text-[var(--color-text-muted)] mb-3">2019 · 78.6%</p>
+              <p class="text-[var(--color-text-secondary)] text-sm">Science stream with Mathematics, Physics, and
+                Chemistry. Developed strong analytical and problem-solving foundations.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="font-bold text-lg mb-1">High School (Class X)</h3>
+              <p class="text-indigo-400 font-medium text-sm mb-1">Kaushambi Public School</p>
+              <p class="text-sm text-[var(--color-text-muted)] mb-3">2017 · 87.4%</p>
+              <p class="text-[var(--color-text-secondary)] text-sm">Completed secondary education with strong academic
+                performance, building a solid foundation for higher studies in science and technology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-padding">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="section-tag">Certifications</span>
+          <h2 class="section-title">Professional <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle mx-auto">Professional training and internship certifications.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div class="cert-card" data-aos="fade-up">
+            <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
+              <i class="fas fa-certificate text-green-400 text-xl"></i>
+            </div>
+            <h3 class="font-bold">Web Development Internship</h3>
+            <p class="text-sm text-[var(--color-text-muted)]">Internship Certification</p>
+            <p class="text-xs text-[var(--color-text-secondary)]">Dec 2023 – Jan 2024</p>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center">
+              <i class="fas fa-certificate text-cyan-400 text-xl"></i>
+            </div>
+            <h3 class="font-bold">C++ Developer Internship</h3>
+            <p class="text-sm text-[var(--color-text-muted)]">Internship Certification</p>
+            <p class="text-xs text-[var(--color-text-secondary)]">July 2024 – Aug 2024</p>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center">
+              <i class="fas fa-certificate text-indigo-400 text-xl"></i>
+            </div>
+            <h3 class="font-bold">Java Full Stack Development Training</h3>
+            <p class="text-sm text-[var(--color-text-muted)]">Ducat, Noida</p>
+            <p class="text-xs text-[var(--color-text-secondary)]">August 2025 – Present</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub & Coding Profiles -->
+    <section id="profiles" class="section-padding bg-[var(--color-bg-secondary)]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="section-tag">Profiles</span>
+          <h2 class="section-title">Coding <span class="gradient-text">Profiles</span></h2>
+          <p class="section-subtitle mx-auto">Find me on these platforms building, learning, and contributing.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <a href="https://github.com/Satyam2024prg" target="_blank" rel="noopener noreferrer" class="social-card group"
+            data-aos="fade-up" data-aos-delay="50">
+            <i class="fab fa-github text-[var(--color-text-primary)] group-hover:text-indigo-400 transition-colors"></i>
+            <h3 class="font-bold text-sm">GitHub</h3>
+            <p class="text-xs text-[var(--color-text-muted)]">Satyam2024prg</p>
+          </a>
+          <a href="https://leetcode.com/u/Satyam_Verma_/" target="_blank" rel="noopener noreferrer"
+            class="social-card group" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-code text-[#FFA116]"></i>
+            <h3 class="font-bold text-sm">LeetCode</h3>
+            <p class="text-xs text-[var(--color-text-muted)]">Satyam_Verma_</p>
+          </a>
+          <a href="https://www.linkedin.com/in/satyam-verma-a8852a2a8/" target="_blank" rel="noopener noreferrer"
+            class="social-card group" data-aos="fade-up" data-aos-delay="150">
+            <i class="fab fa-linkedin text-[#0A66C2]"></i>
+            <h3 class="font-bold text-sm">LinkedIn</h3>
+            <p class="text-xs text-[var(--color-text-muted)]">satyam-verma</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-padding">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="section-tag">Achievements</span>
+          <h2 class="section-title">Key <span class="gradient-text">Milestones</span></h2>
+          <p class="section-subtitle mx-auto">Highlights from my academic and professional journey.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div class="glass-card p-6" data-aos="fade-up">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center mb-4">
+              <i class="fas fa-award text-indigo-400 text-xl"></i>
+            </div>
+            <h3 class="font-bold mb-2">Academic Excellence</h3>
+            <p class="text-[var(--color-text-secondary)] text-sm">Received Academic Excellence Award each year for consistent performance in B.Tech.</p>
+          </div>
+          <div class="glass-card p-6" data-aos="fade-up">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
+              <i class="fas fa-graduation-cap text-purple-400 text-xl"></i>
+            </div>
+            <h3 class="font-bold mb-2">GATE 2025</h3>
+            <p class="text-[var(--color-text-secondary)] text-sm">Qualified GATE 2025 in Computer Science.</p>
+          </div>
+          <div class="glass-card p-6" data-aos="fade-up">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center mb-4">
+              <i class="fas fa-code text-cyan-400 text-xl"></i>
+            </div>
+            <h3 class="font-bold mb-2">LeetCode</h3>
+            <p class="text-[var(--color-text-secondary)] text-sm">Solved 280+ LeetCode problems, strengthening DSA and problem-solving skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-[var(--color-bg-secondary)]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle mx-auto">Have a project in mind or want to connect? I'd love to hear from you.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div data-aos="fade-right">
+            <form id="contact-form" class="space-y-5" novalidate>
+              <div>
+                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required
+                  autocomplete="name">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com"
+                  required autocomplete="email">
+              </div>
+              <div>
+                <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="What's this about?"
+                  required>
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                <textarea id="message" name="message" class="form-input" placeholder="Your message..."
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full justify-center">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+            <div id="form-success" class="form-success mt-4 hidden" role="alert"></div>
+          </div>
+
+          <!-- Contact Info -->
+          <div data-aos="fade-left">
+            <div class="space-y-6">
+              <div class="glass-card p-6 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-envelope text-indigo-400"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Email</h3>
+                  <a href="mailto:sat2024vrm@gmail.com"
+                    class="text-[var(--color-text-secondary)] hover:text-indigo-400 transition-colors">sat2024vrm@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="glass-card p-6 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-map-marker-alt text-cyan-400"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Location</h3>
+                  <p class="text-[var(--color-text-secondary)]">Noida, Uttar Pradesh, India</p>
+                </div>
+              </div>
+
+              <div class="glass-card p-6">
+                <h3 class="font-semibold mb-4">Connect With Me</h3>
+                <div class="flex gap-4">
+                  <a href="https://github.com/Satyam2024prg" target="_blank" rel="noopener noreferrer"
+                    class="w-12 h-12 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-secondary)] hover:text-indigo-400 hover:border-indigo-400 transition-all"
+                    aria-label="GitHub">
+                    <i class="fab fa-github text-xl"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/satyam-verma-a8852a2a8/" target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-12 h-12 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-secondary)] hover:text-[#0A66C2] hover:border-[#0A66C2] transition-all"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin text-xl"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[var(--color-border)] py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Brand -->
+        <div>
+          <a href="#home" class="flex items-center gap-2 mb-4">
+            <span
+              class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-400 flex items-center justify-center text-white font-bold text-lg">S</span>
+            <span class="font-bold text-lg">Satyam<span class="gradient-text">.</span></span>
+          </a>
+          <p class="text-sm text-[var(--color-text-secondary)]">Software Engineer building scalable solutions with
+            clean, efficient code.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#experience" class="footer-link">Experience</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h4 class="font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="assets/resume/resume.pdf" download class="footer-link">Download Resume</a></li>
+            <li><a href="#certifications" class="footer-link">Certifications</a></li>
+            <li><a href="#achievements" class="footer-link">Achievements</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h4 class="font-semibold mb-4">Social</h4>
+          <div class="flex gap-3">
+            <a href="https://github.com/Satyam2024prg" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-secondary)] hover:text-indigo-400 hover:border-indigo-400 transition-all"
+              aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/satyam-verma-a8852a2a8/" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-secondary)] hover:text-[#0A66C2] hover:border-[#0A66C2] transition-all"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://leetcode.com/u/Satyam_Verma_/" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-secondary)] hover:text-[#FFA116] hover:border-[#FFA116] transition-all"
+              aria-label="LeetCode">
+              <i class="fas fa-code"></i>
+            </a>
+            <!-- <a href="https://hackerrank.com/" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center text-[var(--color-text-secondary)] hover:text-[#00EA64] hover:border-[#00EA64] transition-all"
+              aria-label="HackerRank">
+              <i class="fab fa-hackerrank"></i>
+            </a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider mb-8"></div>
+
+      <div class="text-center text-sm text-[var(--color-text-muted)]">
+        <p>&copy; <span id="current-year">2025</span> Satyam. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
